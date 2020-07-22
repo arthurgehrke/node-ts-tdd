@@ -8,7 +8,7 @@ import AppError from '@shared/errors/AppError';
 interface IRequest {
 	name: string;
 	date: Date;
-	user_id: string;
+	user_id: number;
 }
 
 @injectable()
@@ -25,7 +25,7 @@ class CreateTaskService {
 			throw new AppError('This name is already used');
 		}
 
-		const task = this.tasksRepository.execute({ name, date, user_id });
+		const task = this.tasksRepository.create({ name, date, user_id });
 
 		return task;
 	}

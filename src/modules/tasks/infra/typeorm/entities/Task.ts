@@ -19,7 +19,7 @@ class Task {
 	name: string;
 
 	@Column()
-	user_id: string;
+	user_id: number;
 
 	@ManyToOne(() => User)
 	@JoinColumn({ name: 'user_id' })

@@ -3,5 +3,5 @@ import ICreateTaskDTO from '@modules/tasks/dtos/ICreateTaskDTO';
 
 export default interface ITaskRepository {
 	findByName(name: string): Promise<Task | undefined>;
-	execute(data: ICreateTaskDTO): Promise<Task>;
+	create(data: ICreateTaskDTO): Promise<Task>;
 }

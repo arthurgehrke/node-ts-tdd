@@ -1,5 +1,5 @@
 export default interface ICreateTaskDTO {
 	name: string;
 	date: Date;
-	user_id?: string;
+	user_id?: number;
 }
